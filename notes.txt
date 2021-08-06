@@ -1,0 +1,7 @@
+Ok so here's the plan.
+
+I'm going to run a bash loop (for all values of k) that 
+    - runs the docker container with k
+        - write output to specific dir
+    - runs a script which calculates avg silhouette score using that output
+    - avg silhouette score and k are then '>>' to a csv
