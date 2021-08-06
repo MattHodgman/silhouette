@@ -13,8 +13,6 @@ CLUSTER = 'Cluster'
 X = pd.read_csv(sys.argv[1], index_col=CELLID) # get data
 cluster_labels = pd.read_csv(sys.argv[2], index_col=CELLID)
 
-# logicle transform the data
-
 # calculate average silhouette score
 silhouette_avg = silhouette_score(X, cluster_labels[CLUSTER])
 
