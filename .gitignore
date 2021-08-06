@@ -127,3 +127,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# misc
+docker_out/
+*.csv
+.DS_Store
