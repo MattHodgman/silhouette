@@ -10,7 +10,7 @@ for k in {2..20}
 do 
     echo "clustering with k=$k"
     docker run --rm -v "$PWD":/data labsyspharm/mc-flowsom:1.1.1 python3 /app/cluster.py -i /data/$data -o /data/docker_out/ -n $k # run flowsom in docker
-    score="$(python3 sil.py $data_t docker_out/*-cells.csv)"
+    score="$(python3 sil.py $data_t docker_out/*-cells.csv)" # calculate and capture avg ailhouette score
     echo "$k,$score" >> scores.csv
 done
 
