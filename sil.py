@@ -1,4 +1,3 @@
-from silhouette import CELLID
 from sklearn.metrics import silhouette_score
 import pandas as pd
 import sys
