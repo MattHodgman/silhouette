@@ -6,7 +6,7 @@ mkdir fastpg # a special dir for docker output
 echo "k,score" > fastpg/scores.csv # init csv to hold output data
 
 # loop through k values and calculate clustering silhouette scores
-for k in {10,20,40,80,160} 
+for k in {10,20,40,80,160,320} 
 do 
     echo "clustering with k=$k"
     docker run --rm -v "$PWD":/data labsyspharm/mc-fastpg:1.2.2 python3 /app/cluster.py -i /data/$data -o /data/fastpg/ -k $k # run fastpg in docker
@@ -16,4 +16,4 @@ done
 
 # plot results
 echo "plotting results"
-python3 plot.py fastpg/scores.csv
+python3 plot.py fastpg/scores.csv fastpg

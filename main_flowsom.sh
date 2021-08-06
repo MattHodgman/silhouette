@@ -16,4 +16,4 @@ done
 
 # plot results
 echo "plotting results"
-python3 plot.py flowsom/scores.csv
+python3 plot.py flowsom/scores.csv flowsom
